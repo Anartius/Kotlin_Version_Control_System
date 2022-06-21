@@ -235,6 +235,12 @@ files:
     }
 
   learner_created: false
+- name: config.txt
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/177/stages/910/implement#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Tue, 21 Jun 2022 20:51:09 UTC
 record: -1
