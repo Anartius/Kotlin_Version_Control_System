@@ -29,7 +29,7 @@ fun main(args: Array<String>) {
             "add" -> add(args)
             "log" -> printLog()
             "commit" -> commit(args)
-            "checkout" -> println("Restore a file.")
+            "checkout" -> checkout(args)
             "--help" -> println(helpMessage)
             else -> println("\'${args[0]}\' is not a SVCS command.")
         }
@@ -197,4 +197,25 @@ fun getCommitsFromLog() : MutableList<MutableList<String>> {
     }
 
     return commits
+}
+
+
+fun checkout(args: Array<String>) {
+    if (args.size == 1) {
+        println("Commit id was not passed.")
+    } else {
+        val commitId = args[1]
+        val commits = getCommitsFromLog().joinToString(" ")
+        if (commits.contains(commitId)) {
+            val commitDir = File("vcs/commits/$commitId")
+            val indexFile = File("vcs/index.txt")
+            val fileNames = indexFile.readLines()
+
+            fileNames.forEach {
+                File(it).writeText(File("$commitDir/$it").readText())
+            }
+
+            println("Switched to commit $commitId.")
+        } else println("Commit does not exist.")
+    }
 }
