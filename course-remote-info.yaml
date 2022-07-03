@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/526012/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Tue, 21 Jun 2022 20:24:31 UTC
+update_date: Sun, 03 Jul 2022 17:02:29 UTC
 stages:
 - id: 909
   step: 13042
@@ -13,7 +13,7 @@ stages:
   is_completed: true
 - id: 911
   step: 13044
-  is_completed: false
+  is_completed: true
 - id: 912
   step: 13045
   is_completed: false
@@ -21,6 +21,8 @@ topics:
   0:
   - title: Binary numbers
     theory_id: 5544
+  - title: Hexadecimal numbers
+    theory_id: 8788
   - title: Units of information
     theory_id: 6865
   - title: Introduction to Operating systems
@@ -101,10 +103,10 @@ topics:
     theory_id: 15022
   - title: Introduction to collections
     theory_id: 10390
-  - title: Working with strings
-    theory_id: 12561
   - title: Map
     theory_id: 12659
+  - title: Working with strings
+    theory_id: 12561
   - title: Arrays
     theory_id: 4564
   - title: String arrays
@@ -130,6 +132,8 @@ topics:
     theory_id: 6351
   - title: Writing files
     theory_id: 9710
+  - title: File hierarchies
+    theory_id: 15171
   - title: Errors in programs
     theory_id: 11559
   - title: What is an exception
